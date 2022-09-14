@@ -1,0 +1,151 @@
+\documentclass{article}
+
+\usepackage{graphicx}
+
+\renewcommand\thefigure{\arabic{figure}}
+\setcounter{figure}{6}
+
+\begin{document}
+
+\begin{figure*}[b]
+  \caption{Overhead on hash table operations}
+  \centering
+  \medskip
+  \textit{\ \ \ \ \ \ \ \ \ \ \ \ Read heavy}\hfill
+  \includegraphics[height=.03\textwidth]{graphs/legend_overhead_lines_SizeHashTable.png}\hfill
+  \textit{Update heavy\ \ \ \ }\par
+  \medskip
+  Without a concurrent size thread\par
+  \hspace*{1.8mm}\includegraphics[width=.47\textwidth]{graphs/overhead_SizeHashTable_1000000setSize_3ins-2rem_0sizeThreads.png}\hspace*{3.2mm}
+  \includegraphics[width=.47\textwidth]{graphs/overhead_SizeHashTable_1000000setSize_30ins-20rem_0sizeThreads.png}
+  \includegraphics[width=.49\textwidth,trim={0 0 0 .4cm}]{graphs/overhead_bars_SizeHashTable_1000000setSize_3ins-2rem_0sizeThreads.png}\hspace*{0.001mm}
+  \includegraphics[width=.49\textwidth,trim={0 0 0 .4cm}]{graphs/overhead_bars_SizeHashTable_1000000setSize_30ins-20rem_0sizeThreads.png}
+  \medskip
+  With a concurrent size thread\par
+  \hspace*{1.8mm}\includegraphics[width=.473\textwidth,trim={0 0 0 .3cm}]{graphs/overhead_SizeHashTable_1000000setSize_3ins-2rem_1sizeThreads.png}\hspace*{3.2mm}
+  \includegraphics[width=.47\textwidth,trim={0 0 0 .3cm}]{graphs/overhead_SizeHashTable_1000000setSize_30ins-20rem_1sizeThreads.png}
+  {\includegraphics[width=.4975\textwidth,trim={0 0 0 .4cm}]{graphs/overhead_bars_SizeHashTable_1000000setSize_3ins-2rem_1sizeThreads.png}}\hspace*{0.01mm}
+  \includegraphics[width=.49\textwidth,trim={0 0 0 .4cm}]{graphs/overhead_bars_SizeHashTable_1000000setSize_30ins-20rem_1sizeThreads.png}
+  \label{fig:HT overhead}
+\end{figure*}
+
+\begin{figure*}[ht]
+  \caption{Overhead on BST operations}
+  \centering
+  \medskip
+  \textit{\ \ \ \ \ \ \ \ \ \ \ \ Read heavy}\hfill
+  \includegraphics[height=.03\textwidth]{graphs/legend_overhead_lines_SizeBST.png}\hfill
+  \textit{Update heavy\ \ \ \ }\par
+  \medskip
+  Without a concurrent size thread\par
+  \hspace*{2mm}\includegraphics[width=.47\textwidth]{graphs/overhead_SizeBST_1000000setSize_3ins-2rem_0sizeThreads.png}\hspace*{3mm}
+  \includegraphics[width=.47\textwidth]{graphs/overhead_SizeBST_1000000setSize_30ins-20rem_0sizeThreads.png}
+  \includegraphics[width=.49\textwidth,trim={0 0 0 .4cm}]{graphs/overhead_bars_SizeBST_1000000setSize_3ins-2rem_0sizeThreads.png}\hspace*{0.01mm}
+  \includegraphics[width=.49\textwidth,trim={0 0 0 .4cm}]{graphs/overhead_bars_SizeBST_1000000setSize_30ins-20rem_0sizeThreads.png}
+  \medskip
+  With a concurrent size thread\par
+  \hspace*{2mm}\includegraphics[width=.47\textwidth,trim={0 0 0 .3cm}]{graphs/overhead_SizeBST_1000000setSize_3ins-2rem_1sizeThreads.png}\hspace*{3mm}
+  \includegraphics[width=.47\textwidth,trim={0 0 0 .3cm}]{graphs/overhead_SizeBST_1000000setSize_30ins-20rem_1sizeThreads.png}
+  {\includegraphics[width=.49\textwidth,trim={0 0 0 .4cm}]{graphs/overhead_bars_SizeBST_1000000setSize_3ins-2rem_1sizeThreads.png}}\hspace*{0.01mm}
+  \includegraphics[width=.49\textwidth,trim={0 0 0 .4cm}]{graphs/overhead_bars_SizeBST_1000000setSize_30ins-20rem_1sizeThreads.png}
+  \label{fig:BST overhead}
+\end{figure*}
+
+\begin{figure*}[ht]
+  \caption{Overhead on skip list operations}
+  \centering
+  \medskip
+  \textit{\ \ \ \ \ \ \ \ \ \ \ \ Read heavy}\hfill
+  \includegraphics[height=.03\textwidth]{graphs/legend_overhead_lines_SizeSkipList.png}\hfill
+  \textit{Update heavy\ \ \ \ }\par
+  \medskip
+  Without a concurrent size thread\par
+  \includegraphics[width=.49\textwidth]{graphs/overhead_SizeSkipList_1000000setSize_3ins-2rem_0sizeThreads.png}\hspace*{1.5mm}
+  \includegraphics[width=.49\textwidth]{graphs/overhead_SizeSkipList_1000000setSize_30ins-20rem_0sizeThreads.png}
+  {\includegraphics[width=.49\textwidth,trim={0 0 0 .4cm}]{graphs/overhead_bars_SizeSkipList_1000000setSize_3ins-2rem_0sizeThreads.png}}\hspace*{0.5mm}
+  \includegraphics[width=.49\textwidth,trim={0 0 0 .4cm}]{graphs/overhead_bars_SizeSkipList_1000000setSize_30ins-20rem_0sizeThreads.png}
+  \medskip
+  With a concurrent size thread\par
+  \includegraphics[width=.49\textwidth,trim={0 0 0 .3cm}]{graphs/overhead_SizeSkipList_1000000setSize_3ins-2rem_1sizeThreads.png}\hspace*{1mm}
+  \includegraphics[width=.49\textwidth,trim={0 0 0 .3cm}]{graphs/overhead_SizeSkipList_1000000setSize_30ins-20rem_1sizeThreads.png}
+  {\includegraphics[width=.49\textwidth,trim={0 0 0 .4cm}]{graphs/overhead_bars_SizeSkipList_1000000setSize_3ins-2rem_1sizeThreads.png}}\hspace*{.05mm}
+  \includegraphics[width=.49\textwidth,trim={0 0 0 .4cm}]{graphs/overhead_bars_SizeSkipList_1000000setSize_30ins-20rem_1sizeThreads.png}
+  \label{fig:SL overhead}
+\end{figure*}
+
+\begin{figure*}[ht]
+  \caption{Size throughput as a function of data-structure size}
+  \centering
+  \medskip
+  \textit{\ \ \ \ \ \ \ \ \ \ \ Read heavy}\hfill
+  \includegraphics[height=.03\textwidth]{graphs/legend_per_size.png}\hfill
+  \textit{Update heavy\ \ \ }\par
+  \medskip
+  \includegraphics[width=.49\textwidth,trim={0 0 0 0.2cm},clip]{graphs/per-size_sizeThreads_3ins-2rem_31workloadThreads_1sizeThreads.png}\hfill
+  \includegraphics[width=.49\textwidth,trim={0 0 0 0.2cm},clip]{graphs/per-size_sizeThreads_30ins-20rem_31workloadThreads_1sizeThreads.png}\par
+  \label{fig:per-size}
+\end{figure*}
+
+\begin{figure*}
+  \caption{Snapshot-based size throughput as a function of data-structure size}
+  \centering
+  \medskip
+  \textit{\ \ \ \ \ \ \ \ \ \ \ \ Read heavy}\hfill
+  \includegraphics[height=.03\textwidth]{graphs/legend_per_size_others.png}\hfill
+  \textit{Update heavy\ \ \ \ }\par
+  \medskip
+  \includegraphics[width=.49\textwidth,trim={0 0.3cm 0 0},clip]{graphs/per-size_sizeThreads_3ins-2rem_31workloadThreads_1sizeThreads_others.png}\hfill
+  \includegraphics[width=.49\textwidth,trim={0 0.3cm 0 0},clip]{graphs/per-size_sizeThreads_30ins-20rem_31workloadThreads_1sizeThreads_others.png}
+  \label{fig:per-size-snapshot}
+\end{figure*}
+
+\begin{figure*}[ht]
+  \caption{Size scalability}
+  \centering
+  \medskip
+  \hfill\includegraphics[height=.03\textwidth]{graphs/legend_scalability.png}\hspace*{1.5mm}\par
+  \textit{\ \ \ \ \ \ \ \ \ \ \ Read heavy}\hfill
+  \textit{Update heavy\ \ \ \ }\par
+  \medskip
+  \includegraphics[width=.49\textwidth]{graphs/scalability_sizeThreads_1000000setSize_3ins-2rem_32workloadThreads.png}\hfill
+  \includegraphics[width=.49\textwidth]{graphs/scalability_sizeThreads_1000000setSize_30ins-20rem_32workloadThreads.png}
+  \label{fig:scalability}
+\end{figure*}
+
+\begin{figure*}
+  \caption{Overhead breakdown by operation type}
+  \centering
+  \medskip
+  \textit{\ \ \ \ \ \ \ \ \ \ \ \ Read heavy}\hfill
+  \includegraphics[height=.03\textwidth]{graphs/legend_overhead_split_bars.png}\hfill
+  \textit{Update heavy\ \ \ \ }\par
+  \vspace{2mm}
+  SizeHashTable vs HashTable without a concurrent size thread\par
+  \vspace{2.2mm}
+  \includegraphics[width=.49\textwidth,trim={0 .7cm 0 .4cm}]{graphs/overhead_split_bars_SizeHashTable_1000000setSize_3ins-2rem_0sizeThreads.png}\hspace*{0.001mm}
+  \raisebox{.3cm}{\includegraphics[width=.4975\textwidth,trim={0 .7cm 0 .4cm}]{graphs/overhead_split_bars_SizeHashTable_1000000setSize_30ins-20rem_0sizeThreads.png}}
+  SizeHashTable vs HashTable with a concurrent size thread\par
+  \vspace{2.2mm}
+  \raisebox{.3cm}{\includegraphics[width=.4975\textwidth,trim={0 .7cm 0 .4cm}]{graphs/overhead_split_bars_SizeHashTable_1000000setSize_3ins-2rem_1sizeThreads.png}}\hspace*{0.01mm}
+  \includegraphics[width=.49\textwidth,trim={0 .7cm 0 .4cm}]{graphs/overhead_split_bars_SizeHashTable_1000000setSize_30ins-20rem_1sizeThreads.png}
+  \label{fig:overhead breakdown}
+  SizeBST vs BST without a concurrent size thread\par
+  \vspace{2.2mm}
+  \raisebox{.2cm}{\includegraphics[width=.499\textwidth,trim={0 0.7 0 .4cm}]{graphs/overhead_split_bars_SizeBST_1000000setSize_3ins-2rem_0sizeThreads.png}}\hspace*{0.001mm}
+  \includegraphics[width=.49\textwidth,trim={0 0.7 0 .4cm}]{graphs/overhead_split_bars_SizeBST_1000000setSize_30ins-20rem_0sizeThreads.png}
+  SizeBST vs BST with a concurrent size thread\par
+  \vspace{2.2mm}
+  \includegraphics[width=.49\textwidth,trim={0 0.7 0 .4cm}]{graphs/overhead_split_bars_SizeBST_1000000setSize_3ins-2rem_1sizeThreads.png}\hspace*{0.01mm}
+  \raisebox{.2cm}{\includegraphics[width=.497\textwidth,trim={0 0.7 0 .4cm}]{graphs/overhead_split_bars_SizeBST_1000000setSize_30ins-20rem_1sizeThreads.png}}
+  SizeSkipList vs SkipList without a concurrent size thread\par
+  \vspace{2.2mm}
+  \raisebox{.2cm}{\includegraphics[width=.4995\textwidth,trim={0 1.3 0 .4cm}]{graphs/overhead_split_bars_SizeSkipList_1000000setSize_3ins-2rem_0sizeThreads.png}}\hspace*{0.5mm}
+  \includegraphics[width=.49\textwidth,trim={0 1.3 0 .4cm}]{graphs/overhead_split_bars_SizeSkipList_1000000setSize_30ins-20rem_0sizeThreads.png}
+  SizeSkipList vs SkipList with a concurrent size thread\par
+  \vspace{2.2mm}
+  \includegraphics[width=.49\textwidth,trim={0 0.7 0 .4cm}]{graphs/overhead_split_bars_SizeSkipList_1000000setSize_3ins-2rem_1sizeThreads.png}\hspace*{.05mm}
+  \raisebox{.2cm}{\includegraphics[width=.498\textwidth,trim={0 0.7 0 .4cm}]{graphs/overhead_split_bars_SizeSkipList_1000000setSize_30ins-20rem_1sizeThreads.png}}
+  \label{fig:overhead breakdown}
+\end{figure*}
+
+\end{document}
